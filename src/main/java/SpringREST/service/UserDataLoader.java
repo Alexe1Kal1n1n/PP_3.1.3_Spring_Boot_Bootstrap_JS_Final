@@ -26,9 +26,9 @@ public class UserDataLoader {
         allRoles.add(new Role("ROLE_USER"));
         roleService.addRole(allRoles);
 
-        User user1 = new User("Alex", "Kalinin", (byte) 23, "alex@mail.ru", "alex");
-        user1.setRoles("ROLE_ADMIN, ROLE_USER");
-        userService.addUser(user1);
+        User user = new User("Alex", "Kalinin", (byte) 23, "alex@mail.ru", "alex");
+        user.setRoles("ROLE_ADMIN, ROLE_USER");
+        userService.addUser(user);
 
         User user2 = new User("Kim", "ChenIn", (byte) 45, "kim5@chen.com", "kim");
         user2.setRoles("ROLE_USER");

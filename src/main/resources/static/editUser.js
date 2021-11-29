@@ -10,7 +10,6 @@ function editUser() {
         let role = document.createElement('li');
         if (option.selected) {
             new_Roles = new_Roles.concat(option.value + (i != (form.length - 1) ? "," : ""));
-
             role.textContent = option.value + " ";
             rolesList.appendChild(role);
         }

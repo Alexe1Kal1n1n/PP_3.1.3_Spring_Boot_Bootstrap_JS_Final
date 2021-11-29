@@ -1,22 +1,17 @@
 Header();
-
+//запрос на получение данных в виде json
 function Header() {
-    //запрос на получение данных в виде json
     fetch('http://localhost:8080/getAuthorizedUser')
         .then(response => response.json())
         .then(user => {
-
             //ищем по id email юзера и записываем в header_email в виде строки (.innerHTML)
             document.getElementById("header_email").innerHTML = user.username;
             //удобнее выводить в консоль получаемые значения для понимания запросов
             console.log(user)
             console.log(user.username)
-
             //создаем новый элемент маркированного списка(ul) в который позже вставляются элементы списка (li)
-            //т.е. переданная роль или роли юзера, например передаем роль ROLE_ADMIN
             let rolesList = document.createElement('ul');
             for (let i = 0; i < user.roles.length; i++) {
-
                 //создаем элемент списка li со значением роли, например <li>ROLE_ADMIN</li>
                 let role = document.createElement('li');
                 //в переменную role записываем массив полученных текстовых значений роли/ей, например ROLE_ADMIN

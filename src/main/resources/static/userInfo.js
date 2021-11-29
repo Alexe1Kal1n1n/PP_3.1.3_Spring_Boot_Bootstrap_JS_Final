@@ -1,18 +1,14 @@
 userInfo();
-
+//запрос на получение данных в виде json
 function userInfo(user) {
-    //запрос на получение данных в виде json
     fetch('http://localhost:8080/getAuthorizedUser')
         .then(response => response.json())
         .then(user => {
-
             //по id получаем юзера и заполняем таблицу
             let tBody = document.getElementById("userInfo");
             console.log(tBody)
-
             //добавляем строку в таблицу <tr> и возвращаем ее индекс
             var row = tBody.insertRow(0);
-
             //добавляем ячейку <td> в строке таблицы <tr>
             var cell0 = row.insertCell(0);
             cell0.innerHTML = user.id;
@@ -27,5 +23,4 @@ function userInfo(user) {
             var cell5 = row.insertCell(5);
             cell5.innerHTML = allRoles(user).textContent;
         });
-
 }

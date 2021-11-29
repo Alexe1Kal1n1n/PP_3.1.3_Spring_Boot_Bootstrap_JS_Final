@@ -26,10 +26,10 @@
 <div class="container-fluid"><!-- создания контейнера полной ширины, занимающий 100% зоны просмотра-->
     <div class="row vh-100"><!-- создаем ряды -->
         <div class="col mt-3 pl-0 bg-white">
-            <!-- создаем столбец с 0-м отступом слева pl-0 и верхний оступ mt-3 (3 rem или 48px), с белым фоном -->
-            <ul class="nav nav-pills flex-column"><!-- вертикальная навигация flex-column с "подушечками" -->
+            <!-- создаем столбец с белым фоном -->
+            <ul class="nav nav-pills flex-column">
                 <li class="nav-item">
-                    <a href="/admin" class="nav-link active">Admin</a><!-- указываем активную ссылку (синий цвет)-->
+                    <a href="/admin" class="nav-link active">Admin</a><!-- активная ссылка -->
                 </li>
                 <li class="nav-item">
                     <a href="/user" class="nav-link">User</a>
@@ -111,7 +111,6 @@
 
                             <div>
                                 <label class=" font-weight-bold">Roles:</label>
-
                                 <select class="form-control custom-select" size="2" id="newRoles"
                                         name="newRoles"
                                         multiple="multiple" required>
@@ -124,10 +123,8 @@
                                 <button onclick="newUser()" type="submit" class="btn btn-success">Add new user</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
-
             </div>
         </div>
 
